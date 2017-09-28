@@ -38,8 +38,7 @@
     "cordovaPlatforms": [],
     "cordova": {
         "plugins": {
-            "cordova-plugin-whitelist": {},
-            "cordova-plugin-printer": {}
+            "cordova-plugin-whitelist": {}
         },
         "platforms": [
             "android"
