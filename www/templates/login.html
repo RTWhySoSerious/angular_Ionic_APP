@@ -1,0 +1,39 @@
+ <ion-view class="login-view">
+  <ion-nav-bar class="view-navigation" style="display: none!important;">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="padding" scroll="false">
+  <div class="row" >
+    <div class="col">
+      <div class="card login_card_block">
+        <div class="row form-heading">
+          <div class="col col-center">
+            <h1>Login</h1>
+          </div>
+        </div>
+        <div class="row form-wrapper">
+          <div class="col">
+            <form name="login_form" novalidate>
+              <div class="list input-fields">
+                <label class="item item-input login_label">
+                  <input type="text" name="user_name" ng-model="user.userName" class="login_input" placeholder="username" required>
+                </label>
+                <label class="item item-input login_label" show-hide-container>
+                  <input type="password" name="password" ng-model="user.password" class="login_input" placeholder="password" required show-hide-input>
+                </label>
+                <button type="submit" class="button button-full button-positive" ng-click="doLogin()" ng-disabled="login_form.$invalid">
+                  Log in
+                </button>
+                <p ng-show="error" class="message error">{{error}}</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,107 @@
+<ion-view>
+    <ion-nav-title>{{'seatPlanMode'| translate}} <span style="color:{{ deviceStatus.color }};">{{ deviceStatus.text }}</span></ion-nav-title>
+    <ion-content scroll="false">
+        <div class="row" style="height: 785px; padding: 0;">
+            <!--Left Toolbar section-->
+            <div class="col col-20" id="topLeft">
+                <div class="app-controls">
+                    <div class="col text-center" style="padding: 6px;">
+                        <a class="elements_menu" href="#" ng-click="addSeat()"><i class="fa fa-object-group"></i></a>
+                        <a class="elements_menu" href="#" ng-click="addRectTable()"><i class="fa fa-square-o"></i></a>
+                        <a class="elements_menu" href="#" ng-click="addCircleTable()"><i class="fa fa-circle-thin"></i></a>
+                    </div>
+                </div>
+                <div class="ranges text-center" >
+                    <div ng-if="show_controls">
+
+                        <div class="item range">
+                            <i class="fa fa-arrows-alt special_icon" aria-hidden="true"></i>
+                            <i class="icon ion-minus-circled" ng-click="minusScale(seat.scale,2)"></i>
+                            <input class="app-set-zoom" type="range" name="zoompane" min="2" max="10" ng-model="seat.scale" ng-change="setScale(seat.scale)">
+                            <i class="icon ion-plus-circled" ng-click="plusScale(seat.scale,10)"></i>
+                        </div>
+
+                        <div class="item range">
+                            <i class="fa fa-arrow-up special_icon" aria-hidden="true"></i>
+                            <i class="icon ion-minus-circled" ng-click="minusTop(seat.top,150)"></i>
+                            <input class="app-set-zoom" type="range" name="zoompane" min="150" max="670" ng-model="seat.top" ng-change="setTop(seat.top)">
+                            <i class="icon ion-plus-circled" ng-click="plusTop(seat.top,670)"></i>
+                        </div>
+
+                        <div class="item range">
+                            <i class="fa fa-arrow-left special_icon" aria-hidden="true"></i>
+                            <i class="icon ion-minus-circled" ng-click="minusLeft(seat.left,65)"></i>
+                            <input class="app-set-zoom" type="range" name="zoompane" min="65" max="990" ng-model="seat.left" ng-change="setLeft(seat.left)">
+                            <i class="icon ion-plus-circled" ng-click="plusLeft(seat.left,990)"></i>
+                        </div>
+                    </div>
+                    <div class="seat_info_box" ng-if="oneSeat_info && !twoSeatsArray">
+                        <h4>ID: <span>{{selected_seat.id}}</span></h4>
+                        <h4>Status: <span>{{selected_seat.status}}</span></h4>
+                        <h4 id="issueH4"><span id="issue">{{selected_seat.message}}</span></h4>
+                    </div>
+                    <div class="seat_info_box" ng-if="twoSeatsArray && !oneSeat_info" ng-repeat="seat in twoSeats_info">
+                        <h4>ID: <span>{{seat.id}}</span></h4>
+                        <h4>Status: <span>{{seat.status}}</span></h4>
+                        <h4 id="issueH4"><span id="issue">{{seat.message}}</span></h4>
+                    </div>
+                </div>
+
+            </div>
+            <!--Right Canvas side section-->
+            <div class="col col-80 canvas-head-container"  style="background: rgba(204, 186, 133, 0.65); padding: 0;height: 780px;">
+                <canvas width="1210" height="780" id="canvas"></canvas>
+                <div class="app-menu-settings-control">
+                    <div class="row">
+                        <div class="col-50">
+                            <i class="fa fa-copy iconSeatPlanMode" aria-label="md-copy" title="Clone" ng-click="clone()"></i>
+                            <i class="fa fa-trash iconSeatPlanMode" aria-label="md-trash" title="Delete" ng-click="trash()"></i>
+                            <i class="fa fa-undo iconSeatPlanMode" aria-label="md-undo" title="Undo" ng-click="undo()"></i>
+                            <i class="fa fa-refresh iconSeatPlanMode" aria-label="md-reset" title="Reset" ng-click="reset()"></i>
+                        </div>
+                        <div class="col">
+                             <h3 style="display: inline-block;margin: 0 10px; color: white;font-size: 18px;"><i style="margin-right: 5px;" class="fa fa-home fa-2x"></i> Area ID: <b>{{area_id}}</b></h3>
+                              <h3 style="display: inline-block;margin: 0 10px; color: white;font-size: 18px;"><i style="margin-right: 5px;" class="fa fa-user fa-2x"></i> Staff ID: <b>{{staff_id}}</b></h3>
+                               <h3 class="seatplan_name"> <b>{{name}}</b></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row app-footer">
+            <div class=" footer-menu-item col-40">
+                <div class="row">
+                    <div class="col seatplan_info">
+                      <ul class="list seats_info_2">
+                            <li>On the plan: <span style="color: black;">{{on_the_plan}}</span></li>
+                            <li>Available: <span style="color: black;">{{available_seats}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col seatplan_info">
+                      <ul class="list seats_info_2">
+                            <li>Used: <span style="color: red;">{{used_count}}</span></li>
+                            <li>Problem: <span style="color: black;">{{problems_count}}</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class=" footer-menu-item col-60">
+                <div class="col">
+                    <div class="item range">
+                        <i class="icon ion-minus-circled" ng-click="minusZoom(seatplan.zoomlavel)"></i>
+                        <input class="app-set-zoom" type="range" name="zoompane" min="2" max="100" ng-model="seatplan.zoomlavel" ng-change="setZoom(seatplan.zoomlavel)">
+                        <i class="icon ion-plus-circled" ng-click="plusZoom(seatplan.zoomlavel)"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <a class="button button-energized load" type="item-text-wrap" ng-click="loadJSON()">{{'Load'| translate}}</a>
+                        <a class="button button-balanced save" type="item-text-wrap" ng-click="save()">{{'Save'| translate}}</a>
+                        <a class="button button-assertive exit" ng-click="exit()">{{'Exit'| translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

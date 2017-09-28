@@ -1,0 +1,21 @@
+<ion-view>
+     <ion-nav-title>{{'seatStatus' | translate}}</ion-nav-title>
+ <ion-content scroll="false">
+      <div class="row leftside">
+          <!--Left Canvas side section-->
+          <div class="col col-90 right-side-of-change-status">
+             <div class="right-side-view change-seat-status">
+            <button class="button change-status " ng-click="changestatus()">{{'ChangeStatus' | translate}}</button>
+            <button class="button book " ng-click="Book()">{{'Book' | translate}}</button>
+            <button class="button cancel " ng-click="Cancel()">{{'Cancel' | translate}}</button>
+          </div>
+          </div>
+           <!--Right Toolbar section-->
+          <div class="col col-10">
+              <div class="price-section">                
+              </div>
+          </div>
+      </div>
+      
+  </ion-content>
+</ion-view>

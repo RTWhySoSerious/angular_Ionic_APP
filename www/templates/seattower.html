@@ -1,0 +1,65 @@
+<ion-view>
+     <ion-nav-title>{{'seatTowerMode' | translate}}</ion-nav-title>
+ <ion-content scroll="false">
+     <div class="row righside" style="min-height: 100%;">
+         <div class="col col-20" style="min-height: 100%;">
+             <div class="app-controls" style="min-height: 100%;">
+                 <div class="col text-center">
+                     <p>Seats Free: {{tower.quantity.free}}</p>
+                     <p>Seats Booked: {{tower.quantity.booked}}</p>
+                     <p>Seats Payed: {{tower.quantity.payed}}</p>
+                     <p>Seats Unpayed: {{tower.quantity.unpayed}}</p>
+                     <p>Seats unavailable: {{tower.quantity.unavailable}}</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col col-80">
+             <div class="app-controls" style="min-height:100%">
+                 <button class="elements_menu" style="min-height: 45%; width: 45%; margin-left: 2.5%; margin-top: 2.5%;" ng-click="changeFree('add')"><i class="fa fa-plus"></i></button>
+                 <button class="elements_menu" style="min-height: 45%; width: 45%; margin-left: 2.5%; margin-top: 2.5%;" ng-click="changeFree('decrease')"><i class="fa fa-minus"></i></button>
+             </div>
+         </div>
+         <div class="row app-footer" style="background: #fff;">
+             <div class=" footer-menu-item col-50" style="border-right: 2px solid #eee;">
+                 <div class="row" >
+                     <div class="col ">
+                         <ul class="list">
+                             <li class="item">
+                                 <h2>
+                                     Stage : {{tower.area}} -
+                                     Total seats : {{tower.quantity.free + tower.quantity.booked + tower.quantity.unavailable}} -
+                                     Free seats : {{tower.quantity.free}} -
+                                     Problem : {{tower.quantity.unavailable}}
+                                 </h2>
+                             </li>
+                             <li class="item">
+                                 <h2>
+                                     <span style="color: red;">
+                                        On Service : {{tower.onService.name}} -
+                                        ID : {{tower.onService.id}}
+                                     </span>
+                                 </h2>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+
+             </div>
+             <div class="footer-menu-item col-20" style="border-right: 2px solid #eee; padding-top: 2%;">
+                 <div class="col text-center">
+                     <a class="button button-energized load" type="item-text-wrap">{{'Report'| translate}}</a>
+                 </div>
+             </div>
+             <div class="footer-menu-item col-30" style="padding-top: 2%;">
+                 <div class="col text-center">
+                     <a class="button button-balanced save" type="item-text-wrap">{{'Book'| translate}}</a>
+                     <a class="button button-assertive exit" ng-click="backTower()">{{'Back'| translate}}</a>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+
+      
+  </ion-content>
+</ion-view>

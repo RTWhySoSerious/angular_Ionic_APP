@@ -1,0 +1,84 @@
+<ion-view>
+    <ion-nav-title>{{'PosMode'| translate}} <span style="color:{{ deviceStatus.color }};">{{ deviceStatus.text }}</span></ion-nav-title>
+    <ion-content scroll="false">
+        <div class="row" style="height: 785px; padding: 0;">
+            <!--Right Canvas side section-->
+            <div class="col col-21" id="topLeft">
+                <div class="ranges text-center" >
+
+                    <ul class="list seats_info_" >
+                        <li class="item">
+                            <h2 style="text-align:center;"><span style="color: black;float: none;">{{name}}</span></h2>
+                        </li>
+                        <li class="item" id="POS_list_name_id">
+                            <h2  style="text-align:center;"><i class="fa fa-home"></i> <span style="color: black;float: none;">{{area_id}}</span></h2>
+                            <h2  style="text-align:center;"> <i class="fa fa-user"></i> <span style="color: black;float: none;">{{staff_id}}</span></h2>
+                        </li>
+                        <li class="item">
+                            <h2>Paid : <span style="color: green;"> {{paid_count}}</span></h2>
+                        </li>
+                        <li class="item">
+                            <h2>Unpaid : <span style="color: red;">{{unpaid_count}}</span></h2>
+                        </li>
+                    </ul>
+                    <div class="seat_info_box" ng-if="oneSeat_info && !twoSeatsArray">
+                        <h4>ID: <span>{{selected_seat.id}}</span></h4>
+                        <h4>Status: <span>{{selected_seat.status}}</span></h4>
+                        <h4>Price: <span>{{selected_seat.price}}</span></h4>
+                        <h4 id="issueH4"><span id="issue">{{selected_seat.message}}</span></h4>
+                    </div>
+                    <div class="seat_info_box" ng-if="twoSeatsArray && !oneSeat_info" ng-repeat="seat in twoSeats_info">
+                        <h4>ID: <span>{{seat.id}}</span></h4>
+                        <h4>Status: <span>{{seat.status}}</span></h4>
+                        <h4 ng-if="seat.place == 'left'">Price Left: <span>{{seat.price_left}}</span></h4>
+                        <h4 ng-if="seat.place == 'right'">Price Right: <span>{{seat.price_right}}</span></h4>
+                        <h4 id="issueH4"><span id="issue">{{seat.message}}</span></h4>
+                    </div>
+                </div>
+            </div>
+            <!--Left Toolbar section-->
+            
+            <div class="col col-79 canvas-head-container"  style="background: rgba(204, 186, 133, 0.65); padding: 0;height: 780px;">
+                <canvas width="1210" height="780" id="canvas2"></canvas>
+                <div class="pos_black_line">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row app-footer">
+            <div class=" footer-menu-item col-60">
+                <div class="col">
+                    <div class="item range">
+                        <i class="icon ion-minus-circled" ng-click="minusZoom(seatplan.zoomlavel)"></i>
+                        <input class="app-set-zoom" type="range" name="zoompane" min="2" max="100" ng-model="seatplan.zoomlavel" ng-change="setZoom(seatplan.zoomlavel)">
+                        <i class="icon ion-plus-circled" ng-click="plusZoom(seatplan.zoomlavel)"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <a class="button button-balanced save" type="item-text-wrap" ng-click="save()">{{'Save'| translate}}</a>
+                        <a class="button button-assertive exit" ng-click="exit()">{{'Exit'| translate}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" footer-menu-item col-40">
+                <div class="row">
+                    <div class="col seatplan_info">
+                      <ul class="list seats_info_2">
+                            <li>On the plan: <span style="color:black;">{{on_the_plan}}</span></li>
+                            <li>Available: <span style="color:black;">{{available_seats}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col seatplan_info">
+                      <ul class="list seats_info_2">
+                            <li>Used: <span style="color: red;">{{used_count}}</span></li>
+                            <li>Problem: <span style="color: black;">{{problems_count}}</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </ion-content>
+</ion-view>

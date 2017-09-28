@@ -1,0 +1,328 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: 'fontawesome';
+    src: url('../lib/fontawesome/fonts/fontawesome-webfont.eot');
+    src: url('../lib/fontawesome/fonts/fontawesome-webfont.eot');
+    src: url('../lib/fontawesome/fonts/fontawesome-webfont.eot') format('embedded-opentype'), 
+    url('../lib/fontawesome/fonts/fontawesome-webfont.woff') format('woff'), 
+    url('../lib/fontawesome/fonts/fontawesome-webfont.ttf') format('truetype'), 
+    url('../lib/fontawesome/fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal; 
+}
+.app-controls{
+  border-bottom: 2px solid #000;
+  margin-right: -6px;
+}
+a.app-menu {display: block;text-align: center;height: 80px;width: 50px;margin: 0 auto;margin-bottom: 10px;margin-top: 0;padding-top: 20px;}
+.row.app-footer {border-top: 2px solid #e1e1e1;padding: 0px;position: fixed; bottom: 0;width:100%;background: #fff;}
+.footer-menu-item{width: 100%;}
+.footer-menu-item button{border:1px solid #e1e1e1;}
+.canvas-head-container{position: relative}
+.app-menu-settings-control{position: absolute;width: 100%;background: #1a1a1a;height: auto;top: 0;right: 0;padding: 7px 10px;}
+.app-menu-settings-control ion-icon{font-size: 30px;color: #fff;cursor: pointer;margin-right: 10px;margin-left: 5px;}
+.app-menu-settings-control ion-icon::after {content: "";position: absolute;border: 1px solid #eee;height: 25px;margin-left: 8px;}
+.app-footer .range{border:none;}
+.app-footer .app-set-zoom{width: 320px;}
+.popup-container{z-index: 99;}
+.app-notify-message {text-align: center;font-size: 16px;line-height: 22px;}
+.iconSeatPlanMode{font-size: 40px!important; color: #fff;padding: 5px 20px;border-right: 1px solid #ddd;}
+.ranges h4{
+  margin:0!important;
+  padding: 5px;
+}
+.ranges .range{
+  border:none!important;
+  padding: 10px;
+}
+.special_icon{
+  padding: 10px;
+  font-size:25px!important;
+}
+.seat_info_box{
+  border:1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+}
+.seat_info_box h4{
+  text-align: left;
+}
+.seat_info_box h4 span{
+  float: right;
+}
+.seat_info_box #issueH4{
+  text-align: center!important;
+  margin-bottom: 0!important;
+}
+.seat_info_box #issue{
+  color: red;
+  float: none!important;
+}
+.elements_menu{
+  display: inline-block;
+    text-align: -webkit-center;
+    padding: 10px;    
+}
+.elements_menu i{
+  font-size: 40px;
+  color: #000;
+}
+.button{
+  font-size: 16px!important;
+}
+.menu_item{
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+}
+.login_card_block{
+  border-radius: 15px; 
+  margin-top:10%; 
+  padding: 10px;
+}
+.login_card_block h1{
+    margin:20px;
+    text-align: center;
+}
+.login_card_block .login_label{
+    
+}
+.login_card_block .login_input{
+    height: 60px;
+    border-bottom: 1px solid #a2a2a2;
+    font-size:25px;
+}
+.ion-navicon{
+    color: black!important;
+}
+.double_seats_box{
+  background: #ddd;
+}
+.double_seats_box img{
+    display: -webkit-inline-box;
+    padding: 10px;
+    background: #fff;
+}
+.close_btn{
+  position: absolute!important;
+  top: 0!important;
+  right: 0!important;
+}
+.seatplan_info{
+  background: #fff;
+}
+#topLeft{
+  position: relative;
+  padding: 0px 5px;
+
+}
+#POS_list_name_id{
+      padding: 0;
+}
+#POS_list_name_id h2{
+  display: inline-block;
+    border-right: 1px solid #ddd;
+    padding: 10px 20px;
+    margin: 0!important; 
+}
+#POS_list_name_id h2 i{
+  margin-left: 15px;
+  font-size: 30px!important;;
+}
+#POS_list_name_id h2 span{
+  margin-left: 15px;
+}
+.seats_info_{
+  /*border-top:1px solid black!important;
+  border-bottom:1px solid black!important;*/
+  margin-top:10px;
+}
+.seats_info_ li{
+  border:1px solid #ddd!important;
+  padding: 10px;
+}
+.seats_info_ li h2{
+  font-size: 20px;
+  font-weight: 700;
+}
+.seats_info_ li h2 span{
+    font-weight: 800;
+    float: right;
+}
+
+.seats_info li{
+  border:1px solid #ddd!important;
+  padding: 15px;
+}
+.seats_info li h2{
+  font-size: 20px;
+  font-weight: 700;
+}
+.seats_info li h2 span{
+    font-weight: 800;
+    float: right;
+}
+.seatplan_name{
+  position:absolute;
+  top:-10px;
+  right: 20px;
+  color: black;
+  background:#fff;
+  font-size: 18px;
+  height: 100%;
+  padding: 0 10px;
+}
+.seatplan_name_pos_mode{
+  position:absolute;
+  top:1px;
+  left: 20px;
+  color: black;
+  background:#fff;
+  font-size: 18px;
+  height: 100%;
+  padding: 0 10px;
+}
+.seatplan_name_pos_mode b{
+  margin-top: 20px;
+  display: flex;
+  font-size:25px; 
+}
+.seatplan_name b{
+  margin-top: 20px;
+  display: flex;
+  font-size:25px;  
+}
+.seatplan_info ul li{
+  color: #000;
+  background: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  border-bottom:none;
+  border-top:none;
+}
+.seatplan_info ul li i{
+  color: green;
+}
+.pos_footer{
+  padding: 30px 0!important;
+}
+.pos_black_line{
+  position: absolute;
+    width: 100%;
+    background: #1a1a1a;
+    height: 74px;
+    top: 0;
+    right: 0;
+    padding: 7px 10px;
+}
+.seats_info .first_line .no{
+  float: right;
+}
+.seats_info .first_line .no b{
+  margin-left: 15px;
+  font-size: 22px;
+}
+.seats_info .first_line .yes b{
+  margin-left: 15px;
+  font-size: 22px;
+}
+.testHR{
+      height: 66px;
+    width: 1px;
+    position: absolute;
+    right: 50%;
+    top: -6px;
+    background: #eee;
+}
+.seats_info_2 li{
+      padding: 25px!important;
+    font-weight: 700!important;
+    border-top: 1px solid #ddd!important;
+    border-bottom: 1px solid #ddd!important;
+    border: 1px solid #ddd!important;
+    position: relative;
+}
+.seats_info_2 li span{
+    padding: 10px!important;
+    float: none!important;
+    right: 20px;
+    position: absolute;
+    top: 15px;
+}
+.seatplan_info ul li span{
+  color: green;
+  font-weight: 800;
+  float: right;
+  padding: 10px;
+}
+.login-view {
+  width: 100%;
+  height: 100%;
+  background: -moz-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, .4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -moz-linear-gradient(
+        top,
+        rgba(57, 173, 219, .25) 0%,
+        rgba(42, 60, 87, .4) 100%
+      ),
+    -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, .4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -webkit-linear-gradient(
+        top,
+        rgba(57, 173, 219, .25) 0%,
+        rgba(42, 60, 87, .4) 100%
+      ),
+    -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -o-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, .4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -o-linear-gradient(
+        top,
+        rgba(57, 173, 219, .25) 0%,
+        rgba(42, 60, 87, .4) 100%
+      ),
+    -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -ms-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, .4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -ms-linear-gradient(
+        top,
+        rgba(57, 173, 219, .25) 0%,
+        rgba(42, 60, 87, .4) 100%
+      ),
+    -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, .4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(57, 173, 219, .25) 0%,
+      rgba(42, 60, 87, .4) 100%
+    ),
+    linear-gradient(135deg, #670d10 0%, #092756 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#3E1D6D',
+      endColorstr='#092756',
+      GradientType=1
+    );
+}
+

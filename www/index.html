@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script> 
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ionic-material/dist/ionic.material.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    --> 
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="lib/fabric/1.6.6/fabric.min.js"></script>
+    <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+    <script src="lib/ng-storage/ngstorage.min.js"></script>
+    <!--<script src="lib/ng-cordova/ng-cordova.min.js"></script>-->
+    <script src="lib/ng-cordova/ng-cordova.js"></script>
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/LoginCtrl.js"></script>
+    <script src="js/seatplanCtrl.js"></script>
+    <script src="js/PosModeCtrl.js"></script>
+    <script src="js/seattowerCtrl.js"></script>
+    <script src="js/settingCtrl.js"></script>
+    <script src="js/seatstatusCtrl.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/service.js"></script>
+
+
+
+    <!-- <script src="js/authservice.js"></script> -->
+    <!-- <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('Service Worker registered');
+      }).catch(function(err) {
+        console.log('Service Worker registration failed: ', err);
+      });
+    }
+</script> -->
+  </head>
+
+  <body ng-app="starter" class="platform-android platform-cordova platform-webview">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

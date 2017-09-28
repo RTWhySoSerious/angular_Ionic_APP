@@ -1,0 +1,11 @@
+{
+  "name": "Outdoor_festival",
+  "app_id": "",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ],
+  "integrations": {
+    "cordova": {}
+  }
+}

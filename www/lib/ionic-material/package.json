@@ -1,0 +1,111 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ionic-material",
+        "scope": null,
+        "escapedName": "ionic-material",
+        "name": "ionic-material",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\dw\\proj_1\\seatplan"
+    ]
+  ],
+  "_from": "ionic-material@latest",
+  "_id": "ionic-material@0.4.1",
+  "_inCache": true,
+  "_location": "/ionic-material",
+  "_nodeVersion": "4.4.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ionic-material-0.4.1.tgz_1470778158691_0.5348255122080445"
+  },
+  "_npmUser": {
+    "name": "nebulr",
+    "email": "james.ambrose.meyer@gmail.com"
+  },
+  "_npmVersion": "2.14.20",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ionic-material",
+    "scope": null,
+    "escapedName": "ionic-material",
+    "name": "ionic-material",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ionic-material/-/ionic-material-0.4.1.tgz",
+  "_shasum": "a6e4876e6a8e9d989eb87f722972999fb3242a75",
+  "_shrinkwrap": null,
+  "_spec": "ionic-material",
+  "_where": "C:\\dw\\proj_1\\seatplan",
+  "authors": [
+    "Zach Fitzgerald"
+  ],
+  "bugs": {
+    "url": "https://github.com/zachsoft/Ionic-Material/issues"
+  },
+  "dependencies": {
+    "gulp": "^3.7.0",
+    "gulp-concat": "^2.1.7",
+    "gulp-connect": "^2.2.0",
+    "gulp-livereload": "^3.0.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.1.0",
+    "gulp-uglify": "^0.2.1",
+    "lodash": "^3.9.1"
+  },
+  "description": "Ionic Material - Material Design for the Ionic Framework",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-webpack": "^1.4.0",
+    "node-libs-browser": "^0.5.0",
+    "webpack": "^1.9.7"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "a6e4876e6a8e9d989eb87f722972999fb3242a75",
+    "tarball": "https://registry.npmjs.org/ionic-material/-/ionic-material-0.4.1.tgz"
+  },
+  "gitHead": "fd3e3e751f569746a176e476c4373a6883322f57",
+  "homepage": "http://ionicmaterial.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "Ionic",
+    "Material",
+    "Design",
+    "Angular",
+    "Framework",
+    "Hybrid",
+    "Apps",
+    "Mobile"
+  ],
+  "license": "MIT",
+  "main": "dist/ionic-material.min.js",
+  "maintainers": [
+    {
+      "name": "nebulr",
+      "email": "james.ambrose.meyer@gmail.com"
+    }
+  ],
+  "name": "ionic-material",
+  "optionalDependencies": {},
+  "private": false,
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "0.4.1"
+}
